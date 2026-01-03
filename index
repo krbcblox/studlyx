@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crexly - Roblox Building Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <h1>We build Roblox worlds that feel alive.</h1>
+    <p>High-quality Roblox building for games, showcases, and studios. Fast turnaround. Clear pricing.</p>
+    <a href="#order" class="btn">Order a Build</a>
+    <a href="#portfolio" class="btn-outline">View Samples</a>
+  </section>
+
+  <!-- TRUST SIGNAL -->
+  <section id="trust">
+    <p>Trusted by Roblox creators and communities</p>
+    <ul>
+      <li>500+ community merit points</li>
+      <li>Commission-based workflow</li>
+      <li>Clear communication from start to finish</li>
+    </ul>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>What I Do</h2>
+    <div class="service">
+      <h3>Roblox Environment Building</h3>
+      <p>Maps & game environments, interior & exterior builds, stylized or realistic themes.</p>
+    </div>
+    <div class="service">
+      <h3>Game Assets & Structures</h3>
+      <p>Buildings, props, landmarks, optimized for performance, clean hierarchy & naming.</p>
+    </div>
+    <div class="service">
+      <h3>Showcase / Portfolio Builds</h3>
+      <p>For YouTube, thumbnails, or demos. High-detail renders available.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Submit your request via the order form</li>
+      <li>Review & confirmation</li>
+      <li>Build phase with progress updates</li>
+      <li>Delivery of final build</li>
+    </ol>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <h2>Selected Work</h2>
+    <div class="portfolio-gallery">
+      <!-- Add images like this: -->
+      <!-- <img src="img1.jpg" alt="Build example 1"> -->
+    </div>
+  </section>
+
+  <!-- ORDER CTA -->
+  <section id="order">
+    <h2>Ready to start your build?</h2>
+    <p>Submit your request and let’s bring your idea into Roblox.</p>
+    <a href="YOUR_GOOGLE_FORM_LINK" class="btn">Submit Order Request</a>
+    <small>Requests are reviewed before confirmation. No payment required upfront.</small>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <ul>
+      <li>Home</li>
+      <li>Services</li>
+      <li>Portfolio</li>
+      <li>Order</li>
+    </ul>
+    <p>© 2026 — Roblox building services. Not affiliated with Roblox Corporation.</p>
+  </footer>
+
+</body>
+</html>

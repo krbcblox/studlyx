@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studlyx</title>
+    <style>
+@font-face {
+    font-family: 'GoBoldExtra';
+    src: url('fonts/GoboldExtra1.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LuckyGuy';
+    src: url('fonts/LuckiestGuy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+        :root {
+            --primary-color: #3f1b55; /* Dark Purple */
+            --secondary-color: #aa2bca; /* Bright Pink/Purple */
+            --background-color: #ffffff; /* Black */
+            --text-color: #ffffff; /* White */
+            --card-background: #1a1a1a; /* Dark Gray */
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);  
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #311344, #23002c);
+            color: var(--text-color);
+            padding: 1rem 0;
+            border-bottom: 3px solid var(--secondary-color);
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            font-family: 'LuckyGuy', cursive;
+            font-size: 70px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 1rem 0;
+            background-image: url('imgs/hero2.png');
+            color: var(--text-color);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 10px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.103); /* drop shadow */
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .search-bar:hover {
+            box-shadow: 0 6px 30px rgba(255, 255, 255, 0.4); /* Purple glow on hover */
+        }
+
+        .search-bar input[type="text"] {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            width: 40%;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 12px 25px;
+            border: none;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #d42070; /* Darker shade of secondary */
+        }
+
+        .gigs-section {
+            padding: 4rem 0;
+        }
+
+        .gigs-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--secondary-color);
+        }
+
+        .gig-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gig-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gig-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(247, 37, 133, 0.4); /* Purple glow */
+        }
+
+        .gig-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .gig-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .gig-info h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+        }
+
+        .gig-info p {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .gig-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid var(--primary-color);
+        }
+
+        .freelancer-info {
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+
+        .freelancer-info strong {
+            color: var(--text-color);
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Studlyx</h1>
+            <nav>
+                <ul>
+                    <li><a href="studlyxh.html">Home</a></li>
+                    <li><a href="gigs/gigs.html">Gigs</a></li>
+                    <li><a href="#">Developers</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Unlock Your Roblox Dreams</h2>
+            <p>Find talented developers to bring your game ideas to life or showcase your skills to the world.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for services (e.g., UI design, scripting, GFX)...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="gigs-section">
+        <div class="container">
+            <h2>Featured Gigs</h2>
+            <div class="gig-grid">
+                <!-- Gig Card 1 -->
+                <div class="gig-card">
+                    <img src="imgs/build1.jpg" alt="Roblox UI Design Gig">
+                    <div class="gig-info">
+                        <h3>Professional Roblox Build</h3>
+                        <p>Get stunning and performanced buildings for your Roblox games. Modern and clean designs.</p>
+                        <div class="gig-footer">
+                            <div class="freelancer-info">By <strong>Marx/Roe</strong></div>
+                            <div class="price">R$ 500+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gig Card 2 -->
+                <div class="gig-card">
+                    <img src="https://via.placeholder.com/300x200/f72585/ffffff?text=Roblox+Scripting" alt="Roblox Scripting Gig">
+                    <div class="gig-info">
+                        <h3>Expert Roblox Lua Scripting</h3>
+                        <p>Custom scripts for any game mechanic. From simple systems to complex AI.</p>
+                        <div class="gig-footer">
+                            <div class="freelancer-info">By <strong>CodeWizard</strong></div>
+                            <div class="price">R$ 1000+</div>
+                        </div>
+                    </div>
+                </div>
+
+               
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Roblox Marketplace. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+</code>
